@@ -11,7 +11,7 @@ ${PASSWORD}    secret_sauce
 Open Login Page
     Open Browser    ${URL}    ${BROWSER}
     Set Window Size    1280    900
-    Page Should Contain    STSWENG Login Demo
+    Page Should Contain    woshinidebaba
 
 Login With Valid Credentials
     Input Text       id:username    ${USERNAME}
