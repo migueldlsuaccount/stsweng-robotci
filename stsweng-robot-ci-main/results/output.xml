@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.0 on win32)" generated="2026-10-16T17:09:16.548491" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\MES\Desktop\stsweng-robot-ci-main\tests">
+<suite id="s1-s1" name="Login Test" source="C:\Users\MES\Desktop\stsweng-robot-ci-main\tests\login_test.robot">
+<test id="s1-s1-t1" name="Successful Login" line="7">
+<kw name="Open Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:17.011597" level="INFO">Opening browser 'headlesschrome' to base url 'http://127.0.0.1:8000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-16T17:09:17.011220" elapsed="2.414407"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1280</arg>
+<arg>900</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.426251" elapsed="0.027259"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:19.480105" level="INFO">Current page contains text 'STSWENG Login Demo'.</msg>
+<arg>STSWENG Login Demo</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.453855" elapsed="0.026409"/>
+</kw>
+<status status="PASS" start="2026-10-16T17:09:17.009983" elapsed="2.470415"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:19.482718" level="INFO">Typing text 'standard_user' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.481672" elapsed="0.148576"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:19.630833" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-10-16T17:09:19.692510" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.630510" elapsed="0.167369"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:19.798808" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.798270" elapsed="0.170379"/>
+</kw>
+<status status="PASS" start="2026-10-16T17:09:19.481059" elapsed="0.487826"/>
+</kw>
+<kw name="Products Page Should Be Open" owner="resource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id:products-page</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.969968" elapsed="0.022675"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T17:09:20.022167" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-16T17:09:19.993017" elapsed="0.029396"/>
+</kw>
+<status status="PASS" start="2026-10-16T17:09:19.969492" elapsed="0.053240"/>
+</kw>
+<doc>A valid user should reach the Products page.</doc>
+<status status="PASS" start="2026-10-16T17:09:17.008908" elapsed="3.014555"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-16T17:09:20.025495" elapsed="2.240076"/>
+</kw>
+<doc>Smoke test for the successful login flow.</doc>
+<status status="PASS" start="2026-10-16T17:09:16.607800" elapsed="5.658041"/>
+</suite>
+<status status="PASS" start="2026-10-16T17:09:16.551175" elapsed="5.717530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Login Test" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
